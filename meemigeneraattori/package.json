@@ -1,0 +1,25 @@
+{
+  "name": "meemigeneraattori",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  },
+
+  "host": "localhost",
+  "user": "root",
+  "password": "",
+  "database": "feedback_support",
+  "waitForConnections": true,
+  "connectionLimit": 10,
+  "queueLimit": 0
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Generator</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="meme-container">
+    <h1>Meme Generator</h1>
+    <div class="meme">
+      <img src="/images/<%= meme.image %>" alt="Meme">
+      <p><%= meme.caption %></p>
+    </div>
+    <form action="/rate" method="POST">
+      <input type="hidden" name="memeId" value="<%= meme.id %>">
+      <input type="hidden" name="rating" value="up">
+      <button type="submit">👍</button>
+    </form>
+    <form action="/rate" method="POST">
+      <input type="hidden" name="memeId" value="<%= meme.id %>">
+      <input type="hidden" name="rating" value="down">
+      <button type="submit">👎</button>
+    </form>
+    <form action="/add-caption" method="POST">
+      <input type="hidden" name="memeId" value="<%= meme.id %>">
+      <input type="text" name="newCaption" placeholder="Add your caption">
+      <button type="submit">Add Caption</button>
+    </form>
+  </div>
+</body>
+</html>

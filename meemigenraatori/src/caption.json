@@ -1,0 +1,5 @@
+[
+    { "id": 1, "image": "image1.jpg", "caption": "This is a funny meme", "likes": 0, "dislikes": 0 },
+    { "id": 2, "image": "image2.jpg", "caption": "Another hilarious meme", "likes": 0, "dislikes": 0 }
+  ]
+  

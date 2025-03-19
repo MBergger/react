@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <h1>Palautteet</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Palaute</th>
+                <th>Vastaanottaja</th>
+                <th>Vierailijan nimi</th>
+                <th>Vierailijan sähköposti</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% rows.forEach(row => { %>
+                <tr>
+                    <td><%= row.id %></td>
+                    <td><%= row.feedback %></td>
+                    <td><%= row.arrived %></td>
+                    <td><%= row.guest_name %></td>
+                    <td><%= row.guest_email %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
