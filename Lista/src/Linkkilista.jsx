@@ -1,15 +1,13 @@
 const Linkkilista = ({ lista }) => {
-    return (
+  return (
       <ul>
-        {lista.map((linkki, index) => (
-          <li key={index}>
-            <a href={linkki.url} target="_blank" rel="noopener noreferrer">
-              {linkki.nimi}
-            </a>
-          </li>
-        ))}
+          {lista.map((linkki, index) => (
+              <li key={index}>
+                  <a href={linkki.url}>{linkki.nimi}</a>
+              </li>
+          ))}
       </ul>
-    );
-  };
-  
+  );
+};
+
 export default Linkkilista;
