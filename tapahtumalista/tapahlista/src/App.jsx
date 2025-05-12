@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import TapahtumaLomake from "./TapahtumaLomake";
 import TapahtumaLista from "./TapahtumaLista";
-
+import './App.css';
 
 function App () {
   const [tapahtumat, setTapahtumat] = useState([]);

@@ -1,5 +1,6 @@
 import React from "react";
 import Tapahtuma from "./Tapahtuma";
+import './TapahtumaLista.css';
 
 
 const TapahtumaLista = ({ tapahtumat = [], poistaTapahtuma }) => {
