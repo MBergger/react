@@ -1,4 +1,6 @@
 import React, { useReducer } from "react";
+import Naytto from "./Naytto";
+import Painikkeet from "./Painikkeet";
 
 // Reducer-funktio
 function reducer(state, action) {
@@ -14,24 +16,16 @@ function reducer(state, action) {
   }
 }
 
-// Alkuarvo
 const initialState = { laskuri: 0 };
 
-// Näyttö-komponentti
-function Naytto({ arvo }) {
-  return <h2>Laskurin arvo: {arvo}</h2>;
-}
-
-// Pääkomponentti
 export default function Laskuri() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
       <Naytto arvo={state.laskuri} />
-      <button onClick={() => dispatch({ type: "KASVATA" })}>+1</button>
-      <button onClick={() => dispatch({ type: "VAHENNA" })}>-1</button>
-      <button onClick={() => dispatch({ type: "NOLLAA" })}>Nollaa</button>
+      <Painikkeet dispatch={dispatch} />
     </div>
   );
 }
+
